@@ -3151,7 +3151,7 @@
   transition-duration: 0.2s;
 }
 .survey_list_item:hover {
-  background-color: #d2f0ee;
+  background-color: #d8f3fc;
 }
 .survey_list_item.main {
   flex-direction: column;
