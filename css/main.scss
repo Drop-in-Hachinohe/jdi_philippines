@@ -1,9 +1,12 @@
 // 変数定義
-$mainGreen: #1db3ab;
-$mainOrange: #de520d;
+$mainBlue: #3dc1f0;
+$mainBlue-20: rgba(61, 193, 240, .2);
+$mainDeepBlue: #3496b8;
+$mainPurple: #a926a5;
+$mainPurple-20: rgba(169, 39, 165, .2);
 
 $mainStringRed: #d96666;
-$mainStringGreen: #11668b;
+$mainStringBlue: #11668b;
 
 $mainRed: #b9272d;
 $markerPink: rgba(234, 147, 132, .5);
@@ -16,38 +19,35 @@ $commonRed: #df3c23;
   font-family: "Avant Garde";
   src: url("../fonts/ITC_Avant_Garde_Gothic_LT_Book_Regular.woff") format("woff");
 }
-// main_green_grade
-.main_green_grade {
-  background: rgb(29,179,200);
-  background: linear-gradient(171deg, rgba(29,179,200,0.8) 0%, rgba(29,179,171,1) 100%);
+.bg_main_blue {
+  background: $mainBlue;
 }
-.main_green_grade-20 {
-  background: rgb(29,179,171);
-  background: linear-gradient(90deg, rgba(29,179,171,0.1) 0%, rgba(29,179,171,0.2) 100%);
+.bg_main_deep_blue {
+  background: $mainDeepBlue;
 }
 
-.main_orange_grade {
-  background: rgb(222,82,13);
-  background: linear-gradient(171deg, rgba(222,82,13,0.7) 0%, rgba(222,82,13,1) 100%);
+.bg_main_blue-20 {
+  background: $mainBlue-20;
 }
 
-.main_orange_grade-20 {
-  background: rgb(234,178,132);
-  background: linear-gradient(45deg, rgba(234,178,132,0.25) 0%, rgba(234,147,132,0.25) 100%);
+.bg_main_purple {
+  background: $mainPurple;
 }
+
+.bg_main_purple-20 {
+  background: $mainPurple-20;
+}
+
 .bg-line {
   background-color: $line;
 }
 
 // text color
-.color-main_orange {
-  color: $mainOrange;
+.color-main_purple {
+  color: $mainPurple;
 }
-.color-main_green {
-  color: $mainGreen
-}
-.color-string_green {
-  color: $mainStringGreen
+.color-main_deep_green {
+  color: $mainDeepBlue
 }
 .color-white {
   color: white
@@ -381,13 +381,13 @@ $commonRed: #df3c23;
     display: block;
     width: 100%;
     height: 10px;
-    background-color: $mainGreen;
+    background-color: $mainBlue;
     position: absolute;
     top: 0;
     left: 0;
   }
   &_content {
-    background-color: $mainGreen;
+    background-color: $mainBlue;
     width: 90%;
     border-radius: 5px;
     padding: 30px;
@@ -415,7 +415,7 @@ $commonRed: #df3c23;
       display: inline-block;
       width: fit-content;
       &.main {
-        border-bottom: solid 1px $mainGreen;
+        border-bottom: solid 1px $mainBlue;
         outline-offset: 4px;
       }
     }
@@ -436,7 +436,7 @@ $commonRed: #df3c23;
 }
 .section_border {
   display: inline-block;
-  border-bottom: solid 1px $mainGreen;
+  border-bottom: solid 1px $mainBlue;
   outline-offset: 4px;
 }
 .section_icon {
@@ -451,16 +451,16 @@ $commonRed: #df3c23;
   &_inner {
     display: inline-block;
     position: absolute;
-    border-top: solid $mainGreen 1px;
+    border-top: solid $mainBlue 1px;
     height: 15px;
     bottom: -20px;
     &.front {
-      border-right: solid $mainGreen 1px;
+      border-right: solid $mainBlue 1px;
       width: 60%;
       left: 0;
     }
     &.rear {
-      border-left: solid $mainGreen 1px;
+      border-left: solid $mainBlue 1px;
       right: 0;
       width: calc(40% - 15px);
       transform: skewX(-45deg) translateX(-9px);
@@ -719,7 +719,7 @@ $commonRed: #df3c23;
   }
   // スマホのメニューボタンを「メニュー」表記にする場合のclass
   // &_menu_btn {
-  //   border: solid 1px $mainGreen;
+  //   border: solid 1px $mainBlue;
   //   border-radius: 5px;
   //   position: relative;
   //   width: 50px;
@@ -751,7 +751,7 @@ $commonRed: #df3c23;
     height: 45px;
     span {
       position: absolute;
-      background: $mainGreen;
+      background: $mainBlue;
       width: 30px;
       height: 3px;
       transition: 0.3s ease-out;
@@ -925,8 +925,7 @@ $commonRed: #df3c23;
           top: 140px;
           padding-top: 10px;
           padding-bottom: 10px;
-          background: rgb(29,179,200);
-          background: linear-gradient(171deg, rgba(29,179,200,0.8) 0%, rgba(29,179,171,1) 100%);
+          background: $mainBlue;
         }
         &_inner {
           @media (min-width: 768px) {
@@ -957,11 +956,11 @@ $commonRed: #df3c23;
           justify-content: space-between;
           align-items: center;
           &_title {
-            color: $mainStringGreen;
+            color: $stringGray;
             font-weight: 500;
           }
           &:not(:last-child) {
-            border-bottom: solid 1px $mainGreen;
+            border-bottom: solid 1px $mainBlue;
           }
           @media (min-width: 768px) {
             width: 33%;
@@ -1002,8 +1001,8 @@ $commonRed: #df3c23;
     }
     &_item {
       &:nth-child(even) {
-        background: rgb(29,179,171);
-        background: linear-gradient(87deg, rgba(29,179,171,0) 30%, rgba(29,179,171,0.25) 100%);
+        background: rgb(61,193,240);
+        background: linear-gradient(90deg, rgba(61,193,240,0) 39%, rgba(61,193,240,0.2) 100%);
         .cases_list_item_inner {
           @media (min-width: 768px) {
             flex-direction: row-reverse;
@@ -1374,7 +1373,7 @@ $commonRed: #df3c23;
   }
   &_item {
     background: rgb(41,57,139);
-    background: linear-gradient(175deg, rgba(29,179,171,0) 76%, rgba(29,179,171,0.2) 100%);
+    background: linear-gradient(175deg, rgba(61, 193, 240,0) 76%, rgba(61, 193, 240,0.2) 100%);
     padding-top: 30px;
     padding-bottom: 30px;
     &:last-child {
@@ -1513,7 +1512,7 @@ $commonRed: #df3c23;
           display: block;
           position: absolute;
           width: 3px;
-          background-color: $mainGreen;
+          background-color: $mainBlue;
           height: 100%;
           top: 0;
           left: -10px;
@@ -1948,8 +1947,8 @@ $commonRed: #df3c23;
           @include text-base;
         }
         font-weight: 500;
-        color: $mainGreen;
-        border-bottom: solid 1px $mainGreen;
+        color: $mainBlue;
+        border-bottom: solid 1px $mainBlue;
         &::before {
           content: "■";
           width: 10px;
@@ -1999,7 +1998,7 @@ $commonRed: #df3c23;
       text-align: center;
       padding: 0 10px;
       color: white;
-      background-color: $mainGreen;
+      background-color: $mainBlue;
     }
   }
   &_dial {
@@ -2026,7 +2025,7 @@ $commonRed: #df3c23;
 .fixed_bannar_sp {
   &_offer {
     display: flex;
-    background-color: $mainGreen;
+    background-color: $mainBlue;
     color: white;
     .offer_list_item {
       width: 50%;
@@ -2067,7 +2066,7 @@ $commonRed: #df3c23;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: $mainStringGreen;
+  background-color: $mainDeepBlue;
   .arrow {
     transform: translateY(5px);
   }
