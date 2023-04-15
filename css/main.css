@@ -31,7 +31,7 @@
   color: #a926a5;
 }
 
-.color-main_deep_green {
+.color-main_deep_blue {
   color: #3496b8;
 }
 
@@ -1742,6 +1742,11 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 480px) {
+  .box_list.show .box_list_item_img {
+    max-height: none;
+  }
+}
 @media (min-width: 768px) {
   .box_list {
     display: flex;
@@ -1750,9 +1755,15 @@
   }
 }
 .box_list_item {
+  display: block;
   width: 100%;
-  margin-bottom: 15px;
-  display: flex;
+  margin-bottom: 30px;
+}
+@media (min-width: 480px) {
+  .box_list_item {
+    display: flex;
+    align-items: stretch;
+  }
 }
 @media (min-width: 768px) {
   .box_list_item {
@@ -1760,11 +1771,25 @@
   }
 }
 .box_list_item_img {
-  width: 30%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+}
+@media (min-width: 480px) {
+  .box_list_item_img {
+    width: 30%;
+    max-height: none;
+  }
 }
 .box_list_item_content {
-  width: 70%;
-  padding-left: 20px;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .box_list_item_content {
+    width: 70%;
+    padding-left: 20px;
+  }
 }
 
 .free_dial {
@@ -2969,7 +2994,7 @@
   }
 }
 .user_list_item:nth-child(odd) {
-  background: linear-gradient(45deg, rgba(234, 178, 132, 0.25) 0%, rgba(234, 147, 132, 0.25) 100%);
+  background: rgba(169, 39, 165, 0.2);
 }
 .user_list_item:nth-child(even) .user_list_item_inner {
   flex-direction: row-reverse;
@@ -3369,6 +3394,40 @@
   }
 }
 
+.faq_item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.faq_item_question {
+  font-size: 1.0625rem; /* 17px */
+  font-weight: 500;
+  line-height: 1.3;
+  color: #11668b;
+}
+@media (min-width: 640px) {
+  .faq_item_question {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+.faq_item_question::before {
+  content: "Q";
+  font-family: "Avant Garde";
+  color: #11668b;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.faq_item_answer {
+  font-size: 0.8125rem; /* 13px */
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+@media (min-width: 640px) {
+  .faq_item_answer {
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
 .guide {
   margin-top: 70px;
   display: flex;
@@ -3389,7 +3448,7 @@
   padding: 20px;
 }
 .guide_item:hover {
-  background-color: #d2f0ee;
+  background-color: #c5e4f4;
   box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .guide_item:not(:nth-child(-n+2)) {
